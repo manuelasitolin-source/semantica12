@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .btnnav{
+            border-radius: 10%;
+            margin-left: 10px;
+            height: 30px;
+            width: 130px;
+            color: rgb(189, 28, 28);
+        }
+
+        .btnnav:hover{
+            background-color: rgb(52, 43, 128);
+            color: rgb(118, 141, 190);
+        }
+
+        .btnfooter{
+            margin-left: 10px;
+            height: 50px;
+            width: 150px;
+            background-color: rgb(107, 52, 52);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            gap: 10px;
+        }
+
+        .btnfooter:hover{
+            background-color: rgb(23, 22, 90);
+            color: rgb(204, 26, 26);
+        }
+        a{
+            text-decoration: none;
+        }
+        .card{
+            border: 1px;
+            color: rgb(7, 7, 7);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+            justify-content: center;
+           
+        }
+
+        /* o @media serve para alterar as propriedades das tags com base no tamanho do dispositivo
+        para garantir a responsivisade do site, temos que verificar como fica a estilizaçao
+        em varios tamanhos de telas diferentes, pode ser que no computador fique ok, porem quando acessado
+        pelo celular o site quebre, nesse caso sera necessario aplicar ajuste ajustes no tamanho de tela com 
+        o @media()
+        
+        *usamos o !important para forçar a estilizaçao em uma tag, como a tag pode ter id e varias classes
+        o html e css precisam saber qual estilo aplicar, forçamos isso usando o !important no final dp atributo
+
+
+        */
+        @media(max-width:750px){
+            button{
+                width: 50px!important;
+                height: 30px!important;
+            }
+        }
+        
+                
+        
+    </style>
+</head>
+<body>
+    <!--
+    semantica é a parte linguistica que estuda o significado e sentidos das palavras
+    a partir da versao 5 do html, surgiram as tags semanticas que descrevem o significado
+    das partes do seu site para o navegador e outros desenvolvedores entenderem 
+
+    -->
+<header style="background-color: rgb(109, 44, 44); height: 10vh;display: flex;align-items: center; justify-content: center;"> <!-- cabeçalho da pagina-->
+
+    <nav style="display: flex;align-items: center;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHaJvhL62kbgT8e4dGni1QRlH5c75EMGhJDcriGMr-1w&s=10" alt="" height="30px" width="50px">
+        <a href="./index.html"><button class="btnnav">inicio</button></a>
+        <a href="./sobre.html"><button class="btnnav">sobre nos</button></a>
+        <a href="./trabalhe.html"><button class="btnnav">trabalhe conosco</button></a>
+    </nav>
+
+</header>
+
+<main style="background-color: black; height: 70vh;"> <!--conteudo principal, é onde irao as informaçoes do site em si-->
+
+<section style="background-color: rgb(146, 53, 53);height: 40%; display: flex;justify-content: center;align-items: center; flex-direction: column;"> <!--section, é uma sessao da pagina aonde voce pode colocar um conteudo 
+    voce pode separar seu site em varias sessoes-->
+    <h1 > VINGADORES- LINDOS</h1>
+    <hr>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Molestiae nobis est ad magnam! Quas, nostrum. Excepturi nemo natus,
+         asperiores nostrum modi quod esse officia voluptatum veniam ea similique impedit culpa.
+
+    </p>
+</section>
+
+<section style="background-color: rgb(121, 57, 52); height: 60%; display: flex;">
+
+    <div style="width: 50%; height: 100%;background-color: rgb(109, 37, 32);">
+
+        <div class="card">
+            <h4>Natasha</h4>
+            <img class="imgsection" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTytSZ_eonoIkNBLWsg4N_qeU5HOHmu3c6n9gRkgwIYeQ&s=10" alt="" height="50%" width="50%">
+            <p>$: 444444</p>
+        </div>
+    </div>
+
+    <div style="width: 50%; height: 100%; background-color: rgb(80, 31, 31);">
+               <div class="card">
+            <h4>Tony Stark</h4>
+            <img class="imgsection" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaj1EcOc4yLGNa4V7xLyLqXI3-x65GKzrx7zSlK0rxJg&s=10" alt="" height="50%" width="50%">
+            <p>$: 444444</p>
+        </div>
+
+        
+    </div>
+</section>
+
+</main>
+
+
+<footer style="background-color: rgb(146, 53, 53); height: 20vh; display: flex;align-items: center; justify-content: center;">
+    <nav style="display: flex;justify-content: center;align-items: center;">
+        <a href=""><button class="btnfooter">
+             <img width="48" height="48" src="https://img.icons8.com/?size=80&id=BrU2BBoRXiWq&format=png" alt="">instagram</button></a>
+        <a href=""><button class="btnfooter"> 
+            <img width="48" height="48" src="https://img.icons8.com/?size=50&id=118638&format=png" alt="">TikTok</button></a>
+        <a href=""><button class="btnfooter"> 
+            <img width="48" height="48" src="https://img.icons8.com/?size=50&id=6Fsj3rv2DCmG&format=png" alt="">X</button></a>
+
+
+    </nav>
+
+</footer> <!-- footer, é o rodape da pagina'-->
+</body>
+</html>
